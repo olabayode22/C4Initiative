@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - C4 Bingo</title>
+    <link rel="stylesheet" href="stylesUpdated.css">
+    <link rel="stylesheet" href="updated-stylesUpdated.css">
+    <link rel="stylesheet" href="banner-fixUpdated.css">
+    <link rel="stylesheet" href="navbar-stylesUpdated.css">
+    <link rel="stylesheet" href="footer-stylesUpdated.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .how-it-works-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .page-header h1 {
+            color: #1a5336;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            color: #1a5336;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .step {
+            margin-bottom: 3rem;
+        }
+        
+        .step h3 {
+            color: #1a5336;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .step p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background-color: #1a5336;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        
+        .btn-outline {
+            display: inline-block;
+            border: 2px solid #1a5336;
+            color: #1a5336;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        
+        .btn-primary:hover, .btn-outline:hover {
+            opacity: 0.9;
+        }
+        
+        .patterns-section {
+            margin-top: 3rem;
+        }
+        
+        .faq-section {
+            margin-top: 3rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-item h4 {
+            color: #1a5336;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .cta-section h3 {
+            color: #1a5336;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Pattern grid styles */
+        .pattern-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .pattern-example {
+            text-align: center;
+        }
+        
+        .pattern-example h4 {
+            color: #1a5336;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2px;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto 1rem;
+        }
+        
+        .pattern-cell {
+            aspect-ratio: 1;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+        }
+        
+        .pattern-cell.marked {
+            background-color: #1a5336;
+        }
+        
+        .pattern-cell.free {
+            background-color: #3498db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        .pattern-example p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header class="horizontal-nav">
+        <div class="container">
+            <div class="logo">
+                <a href="indexUpdated.html">C4 Bingo</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="indexUpdated.html">Home</a></li>
+                    <li><a href="how-it-worksUpdated.html">How It Works</a></li>
+                    <li><a href="businessesUpdated.html">Businesses</a></li>
+                    <li><a href="prizesUpdated.html">Prizes</a></li>
+                    <li><a href="loginUpdated.html">Login</a></li>
+                    <li><a href="registerUpdated.html" class="nav-button">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="how-it-works-container">
+            <div class="page-header">
+                <h1>How C4 Bingo Works</h1>
+                <p>The Chelsea Cannabis Community Connection (C4) Bingo Program is designed to promote local businesses in Chelsea while providing a fun, interactive experience for participants. Here's everything you need to know about how the program works.</p>
+            </div>
+            
+            <div class="card">
+                <h2 class="section-title">Program Overview</h2>
+                <p>C4 Bingo is a digital bingo game that encourages participants to visit multiple local businesses in Chelsea. Each square on your bingo card represents a different participating business. When you visit a business and make a purchase, you can submit your receipt to mark that square on your card. Complete a bingo pattern to win prizes!</p>
+            </div>
+            
+            <h2 class="section-title">Step-by-Step Guide</h2>
+            
+            <div class="step">
+                <h3>Step 1: Register for an Account</h3>
+                <p>Create your free C4 Bingo account to get started. You'll need to provide your name, email address, and create a password. Once registered, you'll have access to your personalized bingo card.</p>
+                <a href="registerUpdated.html" class="btn-primary">Register Now</a>
+            </div>
+            
+            <div class="step">
+                <h3>Step 2: Explore Your Bingo Card</h3>
+                <p>After registering, you'll receive a digital bingo card with a 5x5 grid. Each square (except the FREE space in the center) represents a participating local business in Chelsea. You can view details about each business by clicking on their square.</p>
+                <a href="sample-cardUpdated.html" class="btn-primary">View Sample Card</a>
+            </div>
+            
+            <div class="step">
+                <h3>Step 3: Visit Local Businesses</h3>
+                <p>Visit the businesses on your bingo card. You can browse the complete directory of participating businesses to plan your visits. Each business offers unique products or services, and many provide special promotions for C4 Bingo participants.</p>
+                <a href="businessesUpdated.html" class="btn-primary">Browse Businesses</a>
+            </div>
+            
+            <div class="step">
+                <h3>Step 4: Make a Purchase & Keep Your Receipt</h3>
+                <p>When you visit a participating business, make a purchase and be sure to keep your receipt. You'll need this receipt to validate your visit and mark the corresponding square on your bingo card.</p>
+            </div>
+            
+            <div class="step">
+                <h3>Step 5: Submit Your Receipt</h3>
+                <p>After your visit, log into your C4 Bingo account and submit your receipt information. You can either upload a photo of your receipt or enter the receipt details manually. Our system will validate your submission and mark the appropriate square on your card.</p>
+                <a href="submit-receiptUpdated.html" class="btn-primary">See Receipt Submission</a>
+            </div>
+            
+            <div class="step">
+                <h3>Step 6: Complete a Bingo Pattern</h3>
+                <p>Continue visiting businesses and submitting receipts to mark squares on your card. When you complete a valid bingo pattern (horizontal, vertical, diagonal line, or full card), you'll automatically be notified that you've won!</p>
+            </div>
+            
+            <div class="step">
+                <h3>Step 7: Claim Your Prize</h3>
+                <p>Once you've completed a bingo, you can claim your prize through the website. Different patterns and achievements qualify for different prize tiers. You'll receive instructions on how to redeem your specific prize.</p>
+                <a href="prizesUpdated.html" class="btn-primary">View Prize Catalog</a>
+            </div>
+            
+            <div class="card" style="margin-top: 2rem;">
+                <h2>Winning Patterns</h2>
+                <p>Different bingo patterns qualify for different prize tiers. The more challenging the pattern, the more valuable the prize!</p>
+                
+                <div class="pattern-examples">
+                    <div class="pattern-example">
+                        <h4>Single Line</h4>
+                        <div class="pattern-grid">
+                            <!-- Row pattern -->
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell free">FREE</div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                        </div>
+                        <p>Any horizontal, vertical, or diagonal line</p>
+                    </div>
+                    
+                    <div class="pattern-example">
+                        <h4>Four Corners</h4>
+                        <div class="pattern-grid">
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell free">FREE</div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                        </div>
+                        <p>All four corner squares</p>
+                    </div>
+                    
+                    <div class="pattern-example">
+                        <h4>X Pattern</h4>
+                        <div class="pattern-grid">
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell free">FREE</div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                        </div>
+                        <p>Both diagonal lines forming an X</p>
+                    </div>
+                    
+                    <div class="pattern-example">
+                        <h4>Full Card</h4>
+                        <div class="pattern-grid">
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell ma
+(Content truncated due to size limit. Use line ranges to read in chunks)

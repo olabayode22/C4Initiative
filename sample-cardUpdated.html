@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Bingo Card - C4 Bingo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesUpdated.css">
+    <link rel="stylesheet" href="navbar-stylesUpdated.css">
+    <style>
+        .bingo-card-container {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .bingo-card {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 2rem;
+        }
+        
+        .bingo-square {
+            aspect-ratio: 1;
+            background-color: white;
+            border: 2px solid var(--primary-green);
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .bingo-square:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .bingo-square.free {
+            background-color: var(--accent-gold);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .bingo-square img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 8px;
+        }
+        
+        .bingo-square h3 {
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .business-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .business-details h2 {
+            color: var(--primary-green);
+            margin-top: 0;
+        }
+        
+        .business-details p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .business-details .special-offer {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            margin-top: 1rem;
+            border-left: 4px solid var(--accent-gold);
+        }
+        
+        .business-details .hours {
+            margin-top: 1rem;
+        }
+        
+        .business-details .hours h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .business-details .hours ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .business-details .hours li {
+            margin-bottom: 0.25rem;
+        }
+        
+        .instructions {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .bingo-card {
+                gap: 5px;
+            }
+            
+            .bingo-square img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .bingo-square h3 {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="horizontal-nav">
+        <div class="container">
+            <div class="logo">
+                <a href="indexUpdated.html">C4 Bingo</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="indexUpdated.html">Home</a></li>
+                    <li><a href="how-it-worksUpdated.html">How It Works</a></li>
+                    <li><a href="businessesUpdated.html">Businesses</a></li>
+                    <li><a href="prizesUpdated.html">Prizes</a></li>
+                    <li><a href="loginUpdated.html">Login</a></li>
+                    <li><a href="registerUpdated.html" class="nav-button">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1>Sample Bingo Card</h1>
+                <p>This is an example of what your personalized C4 Bingo card will look like. Each square represents a local Chelsea business. Click on any square to learn more about the business!</p>
+                
+                <div class="instructions">
+                    <h3>How to Play:</h3>
+                    <ol>
+                        <li>Visit businesses on your card and make a purchase</li>
+                        <li>Keep your receipt and submit it through your account</li>
+                        <li>Mark squares on your card by submitting valid receipts</li>
+                        <li>Complete a winning pattern (line, four corners, X, or full card) to win prizes!</li>
+                    </ol>
+                    <p>The center square is marked as FREE to help you complete patterns.</p>
+                </div>
+                
+                <div class="bingo-card-container">
+                    <div class="bingo-card">
+                        <!-- Row 1 -->
+                        <div class="bingo-square" data-business="Kushala">
+                            <img src="images/businesses/Kushala Logo.jpg" alt="Kushala">
+                            <h3>Kushala</h3>
+                        </div>
+                        <div class="bingo-square" data-business="S&L Subs">
+                            <img src="images/businesses/S&L Sub Logo.png" alt="S&L Subs">
+                            <h3>S&L Subs</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Kim's Beauty Design">
+                            <img src="images/businesses/Kims Beauty Design Logo.png" alt="Kim's Beauty Design">
+                            <h3>Kim's Beauty Design</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Aloe Natural">
+                            <img src="images/businesses/Aloe Natural Logo.png" alt="Aloe Natural">
+                            <h3>Aloe Natural</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Admiral Hills Marina">
+                            <img src="images/businesses/Admirals Hills Marina Logo.png" alt="Admiral Hills Marina">
+                            <h3>Admiral Hills Marina</h3>
+                        </div>
+                        
+                        <!-- Row 2 -->
+                        <div class="bingo-square" data-business="Curly's Restaurant">
+                            <img src="images/businesses/Curlys Restaurant Logo.png" alt="Curly's Restaurant">
+                            <h3>Curly's Restaurant</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Ciao! Pizza & Pasta">
+                            <img src="images/businesses/Ciao's Pizza Logo.avif" alt="Ciao! Pizza & Pasta">
+                            <h3>Ciao! Pizza</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Michael G's">
+                            <img src="images/businesses/Michael G's Logo.avif" alt="Michael G's">
+                            <h3>Michael G's</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Sauna Suites">
+                            <img src="images/businesses/Sauna Suites Logo.png" alt="Sauna Suites">
+                            <h3>Sauna Suites</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Apollinaire Theatre">
+                            <img src="images/businesses/Apollinaire Theatre Logo.png" alt="Apollinaire Theatre">
+                            <h3>Apollinaire Theatre</h3>
+                        </div>
+                        
+                        <!-- Row 3 -->
+                        <div class="bingo-square" data-business="Mi Salvador Mexicano">
+                            <img src="images/businesses/Mi Salvador y Mexicano Logo.png" alt="Mi Salvador Mexicano">
+                            <h3>Mi Salvador Mexicano</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Helados Juli's">
+                            <img src="images/businesses/Helados Julis Logo.jpg" alt="Helados Juli's">
+                            <h3>Helados Juli's</h3>
+                        </div>
+                        <div class="bingo-square free">
+                            <h3>FREE</h3>
+                            <p>Chelsea Dispensary</p>
+                        </div>
+                        <div class="bingo-square" data-business="Pan y Cafe">
+                            <img src="images/businesses/Pan Y Cafe Logo.webp" alt="Pan y Cafe">
+                            <h3>Pan y Cafe</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Los Agaves">
+                            <img src="images/businesses/Los Agaves Logo.avif" alt="Los Agaves">
+                            <h3>Los Agaves</h3>
+                        </div>
+                        
+                        <!-- Row 4 -->
+                        <div class="bingo-square" data-business="Archery Games">
+                            <img src="images/businesses/Archery Games Logo.avif" alt="Archery Games">
+                            <h3>Archery Games</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Tambo 22">
+                            <img src="images/businesses/Tambo 22 Logo.jpg" alt="Tambo 22">
+                            <h3>Tambo 22</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Victorias Diner">
+                            <img src="images/businesses/Victoria's Diner Logo.webp" alt="Victorias Diner">
+                            <h3>Victorias Diner</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Tu Casa Restaurante">
+                            <img src="images/businesses/Tu Casa Restaurante & Bar Logo.jpg" alt="Tu Casa Restaurante">
+                            <h3>Tu Casa Restaurante</h3>
+                        </div>
+                        <div class="bingo-square" data-business="La Esquina Mariachi">
+                            <img src="images/businesses/La Esquina Mariachi Restaurante y Bar Logo.png" alt="La Esquina Mariachi">
+                            <h3>La Esquina Mariachi</h3>
+                        </div>
+                        
+                        <!-- Row 5 -->
+                        <div class="bingo-square" data-business="El Potro Mexican Grill">
+                            <img src="images/businesses/El Potro Mexican Bar & Grill Logo.jpg" alt="El Potro Mexican Grill">
+                            <h3>El Potro Mexican Grill</h3>
+                        </div>
+                        <div class="bingo-square" data-business="The Brown Jug">
+                            <img src="images/businesses/The Brown Jug Logo.avif" alt="The Brown Jug">
+                            <h3>The Brown Jug</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Katz Bagel Bakery">
+                            <img src="images/businesses/Katz Bagel Logo.avif" alt="Katz Bagel Bakery">
+                            <h3>Katz Bagel Bakery</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Fancy Nails & Spa">
+                            <img src="images/businesses/Fancy Nail & Spa Logo.png" alt="Fancy Nails & Spa">
+                            <h3>Fancy Nails & Spa</h3>
+                        </div>
+                        <div class="bingo-square" data-business="Chelsea Dispensary">
+                            <img src="images/businesses/Kushala Logo.jpg" alt="Chelsea Dispensary">
+                            <h3>Chelsea Dispensary</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="registerUpdated.html" class="btn-gold">Register to Get Your Card</a>
+                    <a href="how-it-worksUpdated.html" class="btn-outline" style="margin-left: 1rem;">Back to How It Works</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Business Information Modals -->
+    <div id="businessModal" class="business-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="business-details" id="businessDetails">
+                <!-- Business details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>C4 Bingo</h4>
+                    <p>A community initiative by the Chelsea Cannabis Community Connection to support local businesses.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="indexUpdated.html">Home</a></li>
+                        <li><a href="how-it-worksUpdated.html">How It Works</a></li>
+                        <li><a href="businessesUpdated.html">Businesses</a></li>
+                        <li><a href="prizesUpdated.html">Prizes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="registerUpdated.html">Register</a></li>
+                        <li><a href="loginUpdated.html">Login</a></li>
+                        <li><a href="#">My Bingo Card</a></li>
+                        <li><a href="submit-receiptUpdated.html">Submit Receipt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@c4bingo.org">info@c4bingo.org</a></li>
+                        <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+                        <li><a href="#">123 Main St, Chelsea, MA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Chelsea Cannabis Community Connection (C4) Program. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Business data
+        const businessData = {
+            "Kushala": {
+                name: "Kushala",
+                address: "140 Pearl St, Suite 1, Chelsea, MA 02150",
+                phone: "(617) 466-1536",
+                hours: [
+                    "Monday: 7:00 AM - 5:
+(Content truncated due to size limit. Use line ranges to read in chunks)

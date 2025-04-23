@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Businesses - C4 Bingo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="updated-styles.css">
+    <link rel="stylesheet" href="business-styles.css">
+    <link rel="stylesheet" href="business-categories-styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-cannabis logo-icon"></i>
+                    C4 Bingo
+                </div>
+                <div class="mobile-menu-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="underline-link">Home</a></li>
+                    <li><a href="how-it-works.html" class="underline-link">How It Works</a></li>
+                    <li><a href="businesses.html" class="underline-link">Businesses</a></li>
+                    <li><a href="prizes.html" class="underline-link">Prizes</a></li>
+                    <li><a href="login.html" class="underline-link">Login</a></li>
+                    <li><a href="register.html" class="underline-link">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container text-center">
+            <h1>Participating Businesses</h1>
+            <p>Discover the local Chelsea businesses participating in the C4 Bingo Program.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Business Categories</h2>
+            </div>
+            <p>Explore businesses by category to find exactly what you're looking for.</p>
+            
+            <div class="business-categories">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4>Food & Drink</h4>
+                    <p>Restaurants, cafés, bakeries, and specialty food shops</p>
+                    <a href="#" class="btn-text" data-filter="food-drink">View Businesses</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h4>Retail</h4>
+                    <p>Clothing, gifts, home goods, and specialty shops</p>
+                    <a href="#" class="btn-text" data-filter="retail">View Businesses</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h4>Health & Beauty</h4>
+                    <p>Salons, spas, fitness centers, and wellness services</p>
+                    <a href="#" class="btn-text" data-filter="health">View Businesses</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h4>Arts & Entertainment</h4>
+                    <p>Galleries, theaters, music venues, and creative spaces</p>
+                    <a href="#" class="btn-text" data-filter="arts">View Businesses</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-header">
+                    <i class="fas fa-filter"></i>
+                    <h2>Browse by Category</h2>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-button active" data-filter="all"><i class="fas fa-th-large"></i>All Categories</button>
+                    <button class="filter-button" data-filter="food-drink"><i class="fas fa-utensils"></i>Food & Drink</button>
+                    <button class="filter-button" data-filter="retail"><i class="fas fa-shopping-bag"></i>Retail</button>
+                    <button class="filter-button" data-filter="health"><i class="fas fa-spa"></i>Health & Beauty</button>
+                    <button class="filter-button" data-filter="arts"><i class="fas fa-palette"></i>Arts & Entertainment</button>
+                    <button class="filter-button" data-filter="services"><i class="fas fa-concierge-bell"></i>Services</button>
+                </div>
+            </div>
+            
+            <div class="section-title">
+                <h2>Featured Partners</h2>
+            </div>
+            <p>These local businesses are proud partners of the C4 Bingo Program, offering unique products and services to the Chelsea community.</p>
+            
+            <div class="business-grid">
+                <!-- First 8 businesses (visible initially) -->
+                <div class="business-card" data-category="food-drink">
+                    <div class="business-image">
+                        <img src="images/businesses/Kushala Logo.jpg" alt="Kushala">
+                        <div class="business-category-tag">Food & Drink</div>
+                    </div>
+                    <div class="business-content">
+                        <h3>Kushala</h3>
+                        <p>Coffee house and tapas bar with specialty drinks and a cozy atmosphere.</p>
+                        
+                        <div class="business-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>140 Pearl St, Suite 1, Chelsea, MA 02150</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(617) 466-1536</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Mon: 7am-5pm, Tue-Thu: 7am-8pm, Fri: 7am-9pm, Sat: 8am-9pm, Sun: 9am-3pm</span>
+                            </div>
+                        </div>
+                        
+                        <div class="special-offer">
+                            <div class="offer-label">Special Offer:</div>
+                            <div class="offer-text">15% off any specialty coffee drink with your C4 Bingo card</div>
+                        </div>
+                        
+                        <a href="submit-receipt.html" class="btn-primary">Submit Receipt</a>
+                    </div>
+                </div>
+                
+                <div class="business-card" data-category="food-drink">
+                    <div class="business-image">
+                        <img src="images/businesses/S&L Sub Logo.png" alt="S&L Subs">
+                        <div class="business-category-tag">Food & Drink</div>
+                    </div>
+                    <div class="business-content">
+                        <h3>S&L Subs</h3>
+                        <p>Local sub shop known for having the biggest subs in town with fresh ingredients.</p>
+                        
+                        <div class="business-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>462 Eastern Ave, Chelsea, MA 02150</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(617) 884-9381</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Fri: 9am-7pm, Sat: 9am-3pm, Sun: Closed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="special-offer">
+                            <div class="offer-label">Special Offer:</div>
+                            <div class="offer-text">Free small drink with purchase of any large sub</div>
+                        </div>
+                        
+                        <a href="submit-receipt.html" class="btn-primary">Submit Receipt</a>
+                    </div>
+                </div>
+                
+                <div class="business-card" data-category="health">
+                    <div class="business-image">
+                        <img src="images/businesses/Kims Beauty Design Logo.png" alt="Kim's Beauty Design">
+                        <div class="business-category-tag">Health & Beauty</div>
+                    </div>
+                    <div class="business-content">
+                        <h3>Kim's Beauty Design</h3>
+                        <p>Complete nail and hair care along with body tattooing and permanent cosmetics.</p>
+                        
+                        <div class="business-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>315 Broadway, Chelsea, MA 02150</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(617) 884-1464</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Mon: Closed, Tue-Sat: 10am-7pm, Sun: 11am-5pm</span>
+                            </div>
+                        </div>
+                        
+                        <div class="special-offer">
+                            <div class="offer-label">Special Offer:</div>
+                            <div class="offer-text">20% off any nail service on your first visit with C4 Bingo card</div>
+                        </div>
+                        
+                        <a href="submit-receipt.html" class="btn-primary">Submit Receipt</a>
+                    </div>
+                </div>
+                
+                <div class="business-card" data-category="food-drink">
+                    <div class="business-image">
+                        <img src="images/businesses/Aloe Natural Logo.png" alt="Aloe Natural">
+                        <div class="business-category-tag">Food & Drink</div>
+                    </div>
+                    <div class="business-content">
+                        <h3>Aloe Natural</h3>
+                        <p>Açaí & Coffee Shop offering smoothies, fruit bowls, and specialty coffees.</p>
+                        
+                        <div class="business-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>61 Everett Ave, Chelsea, MA 02150</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(617) 466-1175</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Fri: 7:30am-3pm, Sat: 9am-3pm, Sun: Closed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="special-offer">
+                            <div class="offer-label">Special Offer:</div>
+                            <div class="offer-text">Buy one açaí bowl, get a small coffee free</div>
+                        </div>
+                        
+                        <a href="submit-receipt.html" class="btn-primary">Submit Receipt</a>
+                    </div>
+                </div>
+                
+                <div class="business-card" data-category="services">
+                    <div class="business-image">
+                        <img src="images/businesses/Admirals Hills Marina Logo.png" alt="Admiral Hills Marina">
+                        <div class="business-category-tag">Services</div>
+                    </div>
+                    <div class="business-content">
+                        <h3>Admiral Hills Marina</h3>
+                        <p>Full-service marina offering boat slips, storage, and waterfront access.</p>
+                        
+                        <div class="business-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>100 Admiral's Way, Chelsea, MA 02150</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(617) 884-1889</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Sun: 8am-6pm (May-Oct), Mon-Fri: 9am-5pm (Nov-Apr)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="special-offer">
+                            <div class="offer-label">Special Offer:</div>
+                            <div class="offer-text">10% off daily boat rentals with C4 Bingo card</div>
+                        </div>
+                        
+                        <a href="submit-receipt.html" class="btn-primary">Submit Receipt</a>
+                    </div>
+                </div>
+                
+                <div class="business-card" data-category="food-drink">
+                    <div class="business-image">
+                        <img src="images/businesses/Curlys Restaurant Logo.png" alt="Curly's Restaurant">
+                        <div class="business-category-tag">Food & Drink</div>
+                    </div>
+                    <div class="business-content">
+                        <h3>Curly's Restaurant</h3>
+                        <p>Family-owned restaurant serving breakfast and lunch with homestyle cooking.</p>
+                        
+                        <div class="business-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>101 Broadway, Chelsea, MA 02150</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(617) 884-0705</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Fri: 6am-2pm, Sat-Sun: 7am-2pm</span>
+                            </div>
+                        </div>
+                        
+                        <div class="special-offer">
+                            
+(Content truncated due to size limit. Use line ranges to read in chunks)

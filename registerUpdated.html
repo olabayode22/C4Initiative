@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - C4 Bingo</title>
+    <link rel="stylesheet" href="stylesUpdated.css">
+    <link rel="stylesheet" href="updated-stylesUpdated.css">
+    <link rel="stylesheet" href="banner-fixUpdated.css">
+    <link rel="stylesheet" href="navbar-stylesUpdated.css">
+    <link rel="stylesheet" href="footer-stylesUpdated.css">
+    <link rel="stylesheet" href="auth-stylesUpdated.css">
+    <link rel="stylesheet" href="images/backgrounds/chelsea_skylineUpdated.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="horizontal-nav">
+        <div class="container">
+            <div class="logo">
+                <a href="indexUpdated.html">C4 Bingo</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="indexUpdated.html">Home</a></li>
+                    <li><a href="how-it-worksUpdated.html">How It Works</a></li>
+                    <li><a href="businessesUpdated.html">Businesses</a></li>
+                    <li><a href="prizesUpdated.html">Prizes</a></li>
+                    <li><a href="loginUpdated.html">Login</a></li>
+                    <li><a href="registerUpdated.html" class="nav-button">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-container register-page">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>Create Your Account</h2>
+                    <p>Join the C4 Bingo community and start supporting local Chelsea businesses!</p>
+                </div>
+                
+                <!-- Success message (hidden by default) -->
+                <div class="success-message">
+                    <p><i class="fas fa-check-circle"></i> Your account has been created successfully!</p>
+                </div>
+                
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                        <div class="error-message">Please enter your full name</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        <div class="error-message">Please enter a valid phone number</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                        <div class="error-message">Password must be at least 8 characters</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                        <div class="error-message">Passwords do not match</div>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">I would like to receive updates about C4 Bingo and local Chelsea businesses</label>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn">
+                        <span class="loading-spinner"></span>
+                        Create Account
+                    </button>
+                </form>
+                
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="loginUpdated.html">Log in here</a></p>
+                </div>
+                
+                <div class="social-login">
+                    <p>Or sign up with</p>
+                    <div class="social-buttons">
+                        <a href="#" class="social-btn google"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn apple"><i class="fab fa-apple"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>C4 Bingo</h4>
+                    <p>A community initiative by the Chelsea Cannabis Community Connection to support local businesses.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="indexUpdated.html">Home</a></li>
+                        <li><a href="how-it-worksUpdated.html">How It Works</a></li>
+                        <li><a href="businessesUpdated.html">Businesses</a></li>
+                        <li><a href="prizesUpdated.html">Prizes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="registerUpdated.html">Register</a></li>
+                        <li><a href="loginUpdated.html">Login</a></li>
+                        <li><a href="#">My Bingo Card</a></li>
+                        <li><a href="submit-receiptUpdated.html">Submit Receipt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@c4bingo.org">info@c4bingo.org</a></li>
+                        <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+                        <li><a href="#">123 Main St, Chelsea, MA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Chelsea Cannabis Community Connection (C4) Program. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.getElementById('register-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            const fullname = document.getElementById('fullname');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirm-password');
+            
+            // Reset previous errors
+            document.querySelectorAll('.form-group').forEach(group => {
+                group.classList.remove('error');
+            });
+            
+            // Validate fullname
+            if (!fullname.value.trim()) {
+                fullname.parentElement.classList.add('error');
+                isValid = false;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                email.parentElement.classList.add('error');
+                isValid = false;
+            }
+            
+            // Validate password
+            if (password.value.length < 8) {
+                password.parentElement.classList.add('error');
+                isValid = false;
+            }
+            
+            // Validate confirm password
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.parentElement.classList.add('error');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show loading state
+                const submitBtn = this.querySelector('.auth-btn');
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+                
+                // Simulate form submission (would be replaced with actual API call)
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                    
+                    // Show success message
+                    document.querySelector('.success-message').style.display = 'block';
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Redirect after delay (for demo purposes)
+                    setTimeout(() => {
+                        // window.location.href = 'loginUpdated.html';
+                        // Commented out to prevent actual redirect in demo
+                    }, 3000);
+                }, 1500);
+            }
+        });
+    </script>
+</body>
+</html>

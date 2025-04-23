@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prizes - C4 Bingo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="stylesUpdated.css">
+    <link rel="stylesheet" href="updated-stylesUpdated.css">
+    <link rel="stylesheet" href="prize-stylesUpdated.css">
+    <link rel="stylesheet" href="winning-patterns-stylesUpdated.css">
+    <link rel="stylesheet" href="prize-categories-stylesUpdated.css">
+    <style>
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2px;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        
+        .pattern-cell {
+            aspect-ratio: 1;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pattern-cell.marked {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .pattern-cell.free {
+            background-color: #2196F3;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .pattern-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .pattern-example {
+            text-align: center;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .pattern-example h4 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .pattern-example p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .chelsea-experience-container {
+            background-color: #f8f9fa;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .chelsea-experience-container h3 {
+            color: #4CAF50;
+            margin-top: 0;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header class="horizontal-nav">
+        <div class="container">
+            <div class="logo">
+                <a href="indexUpdated.html">C4 Bingo</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="indexUpdated.html">Home</a></li>
+                    <li><a href="how-it-worksUpdated.html">How It Works</a></li>
+                    <li><a href="businessesUpdated.html">Businesses</a></li>
+                    <li><a href="prizesUpdated.html">Prizes</a></li>
+                    <li><a href="loginUpdated.html">Login</a></li>
+                    <li><a href="registerUpdated.html" class="nav-button">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero text-center">
+        <div class="container">
+            <h1>Prizes & Rewards</h1>
+            <p>Complete bingo patterns to win these exciting prizes from local Chelsea businesses.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>How to Win</h2>
+            </div>
+            <p>The C4 Bingo Program offers multiple ways to win prizes by completing different patterns on your bingo card.</p>
+            
+            <div class="card" style="margin-top: 2rem;">
+                <h2>Winning Patterns</h2>
+                <p>Different bingo patterns qualify for different prize tiers. The more challenging the pattern, the more valuable the prize!</p>
+                
+                <div class="pattern-examples">
+                    <div class="pattern-example">
+                        <h4>Single Line</h4>
+                        <div class="pattern-grid">
+                            <!-- Row pattern -->
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell free">FREE</div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                        </div>
+                        <p>Any horizontal, vertical, or diagonal line</p>
+                    </div>
+                    
+                    <div class="pattern-example">
+                        <h4>Four Corners</h4>
+                        <div class="pattern-grid">
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell free">FREE</div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                        </div>
+                        <p>All four corner squares</p>
+                    </div>
+                    
+                    <div class="pattern-example">
+                        <h4>X Pattern</h4>
+                        <div class="pattern-grid">
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell free">FREE</div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell"></div>
+                            <div class="pattern-cell marked"></div>
+                        </div>
+                        <p>Both diagonal lines forming an X</p>
+                    </div>
+                    
+                    <div class="pattern-example">
+                        <h4>Full Card</h4>
+                        <div class="pattern-grid">
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell free">FREE</div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                            <div class="pattern-cell marked"></div>
+                        </div>
+                        <p>All 24 squares (excluding FREE)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-title" style="margin-top: 3rem;">
+                <h2>Prize Categories</h2>
+            </div>
+            <p>Prizes are organized into three tiers based on the pattern you complete.</p>
+            
+            <div class="prize-categories">
+                <div class="prize-category bronze">
+                    <h3>Bronze Level</h3>
+                    <h4>Line Bingo Prizes</h4>
+                    <ul>
+                        <li>$10 gift cards to participating businesses</li>
+                        <li>10-15% discounts on purchases</li>
+                        <li>Free coffee or dessert with purchase</li>
+                        <li>C4 Program merchandise (tote bags, pins)</li>
+                        <li>Small product samples from local shops</li>
+                    </ul>
+                </div>
+                
+                <div class="prize-category silver">
+                    <h3>Silver Level</h3>
+                    <h4>Four Corners Prizes</h4>
+                    <ul>
+                        <li>$25 gift cards to participating businesses</li>
+                        <li>20-25% discounts on purchases</li>
+                        <li>Free appetizer or side dish with meal</li>
+                        <li>Premium C4 Program merchandise (t-shirts, water bottles)</li>
+                        <li>Medium-value products from local shops</li>
+                        <li>2-for-1 service offers</li>
+                    </ul>
+                </div>
+                
+                <div class="prize-category gold">
+                    <h3>Gold Level</h3>
+                    <h4>Full Card Prizes</h4>
+                    <ul>
+                        <li>$50-100 gift cards to participating businesses</li>
+                        <li>30-50% discounts on purchases</li>
+                        <li>Free meals or services</li>
+                        <li>Exclusive C4 Program collector items</li>
+                        <li>High-value products from local shops</li>
+                        <li>Entry into quarterly grand prize drawings</li>
+                        <li>VIP access to special events</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-title" style="margin-top: 3rem;">
+                <h2>Featured Prizes</h2>
+            </div>
+            <p>Check out these exciting prizes currently available in the C4 Bingo Program.</p>
+            
+            <div class="featured-prizes">
+                <div class="prize-card gold">
+                    <div class="prize-level">Gold Level</div>
+                    <h3>$100 Shopping Spree</h3>
+                    <p>$100 gift card to Green Goods Market for organic groceries and local products.</p>
+                    <div class="prize-sponsor">Sponsored by: Green Goods Market</div>
+                </div>
+                
+                <div class="prize-card silver">
+                    <div class="prize-level">Silver Level</div>
+                    <h3>Dinner for Two</h3>
+                    <p>Complimentary dinner for two at Local Diner, including appetizers and dessert.</p>
+                    <div class="prize-sponsor">Sponsored by: Local Diner</div>
+                </div>
+                
+                <div class="prize-card bronze">
+                    <div class="prize-level">Bronze Level</div>
+                    <
+(Content truncated due to size limit. Use line ranges to read in chunks)
