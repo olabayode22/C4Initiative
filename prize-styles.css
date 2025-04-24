@@ -1,0 +1,64 @@
+.prize-card {
+    background-color: var(--neutral-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-lg);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.prize-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.prize-level-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 0 0 var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.gold-prize .prize-level-tag {
+    background-color: var(--accent-gold);
+}
+
+.silver-prize .prize-level-tag {
+    background-color: #C0C0C0;
+}
+
+.bronze-prize .prize-level-tag {
+    background-color: #CD7F32;
+}
+
+.featured-prizes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+@media (max-width: 992px) {
+    .featured-prizes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-prizes {
+        grid-template-columns: 1fr;
+    }
+}
